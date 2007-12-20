@@ -17,6 +17,7 @@ URL:		http://search.cpan.org/dist/%{module}/
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot/
 
 %description
 This module provides a single function called dump() that takes a list
