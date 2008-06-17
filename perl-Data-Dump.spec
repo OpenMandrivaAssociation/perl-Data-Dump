@@ -3,7 +3,7 @@
 %define	modprefix Data
 
 %define version 1.08
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: 	Pretty printing of data structures
 Name: 		%{name}
