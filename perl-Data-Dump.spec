@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix Data
 
-%define version 1.12
+%define version 1.13
 %define release %mkrel 1
 
 Summary: 	Pretty printing of data structures
