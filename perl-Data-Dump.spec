@@ -1,23 +1,21 @@
-%define	module	Data-Dump
-%define name	perl-%{module}
-%define	modprefix Data
+%define	upstream_name	 Data-Dump
+%define upstream_version 1.15
 
-%define version 1.14
-%define release %mkrel 1
+Name: 		perl-%{upstream_name}
+Version: 	%perl_convert_version %{upstream_version}
+Release: 	%mkrel 1
 
 Summary: 	Pretty printing of data structures
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
 License: 	Artistic/GPL
 Group: 		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-BuildArch:	noarch
-URL:		http://search.cpan.org/dist/%{module}/
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot/
+BuildArch:	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a single function called dump() that takes a list
@@ -27,7 +25,7 @@ the original arguments. The string is formatted for easy reading.
 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,5 +45,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README Changes
 %{_mandir}/*/*
-%{perl_vendorlib}/%{modprefix}
+%{perl_vendorlib}/Data
 
