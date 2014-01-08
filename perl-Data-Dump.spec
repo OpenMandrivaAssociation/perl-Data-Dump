@@ -1,14 +1,14 @@
 %define	modname	Data-Dump
-%define modver	1.19
+%define modver 1.22
 
 Summary:	Pretty printing of data structures
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Data/%{modname}-%{modver}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Data/Data-Dump-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -35,4 +35,5 @@ the original arguments. The string is formatted for easy reading.
 %doc README Changes
 %{perl_vendorlib}/Data
 %{_mandir}/man3/*
+
 
