@@ -1,10 +1,10 @@
 %define	modname	Data-Dump
-%define modver 1.22
+%define modver 1.23
 
 Summary:	Pretty printing of data structures
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
